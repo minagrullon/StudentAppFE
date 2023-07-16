@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./SearchBar.scss";
 
-const SearchBar = ({ students, search, setSearch }) => {
-  // another piece of state to hold the search matches
-  // use the string to filter thru students, making the fetch call
-  //
+const SearchBar = ({ students, setSearch }) => {
   const handleSearchText = (e) => {
     const searchInput = e.target.value.toLowerCase();
     if (searchInput) {
@@ -24,7 +21,6 @@ const SearchBar = ({ students, search, setSearch }) => {
         placeholder="Search by name..."
         onChange={handleSearchText}
       />
-      {console.log(search)}
     </div>
   );
 };
