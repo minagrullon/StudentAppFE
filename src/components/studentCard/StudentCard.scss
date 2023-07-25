@@ -1,36 +1,57 @@
 .studentCard {
-    padding: 15px 25px;
-    display: flex;
-    align-items: center;
-    font-family: "Raleway", sans-serif;
-    background-color: white;
-  
-    &__profileImage {
-      width: 110px;
-      height: 110px;
-      border: 1px solid #aaa;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-right: 40px;
-  
-      img {
-        width: inherit;
-        height: inherit;
-      }
+  padding: 15px 25px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+
+  &__profileImage {
+    width: 110px;
+    height: 110px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+
+    img {
+      width: inherit;
+      height: inherit;
     }
-  
-    &__name {
-      font-size: 40px;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 15px;
+  }
+
+  &__name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__studentDetail {
+    color: #aaa;
+    margin-left: 20px;
+    margin-bottom: 4px;
+    font-size: 1.1em;
+  }
+
+  &_showMore_button {
+    justify-self: right;
+    align-self: flex-start;
+    font-size: 4em;
+    font-family: sans-serif;
+    width: fit-content;
+    &__plus,
+    &__minus {
+      color: grey;
     }
-  
-    &__studentDetail {
-      color: #aaa;
-      margin-left: 20px;
-      margin-bottom: 4px;
-      font-size: 1.1em;
+    &__plus:hover,
+    &__minus:hover {
+      color: black;
     }
+  }
+
+  &_showMore_info {
+    grid-column: 2;
+  }
 }
-  

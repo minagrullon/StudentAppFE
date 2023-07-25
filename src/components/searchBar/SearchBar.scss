@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-
+.searchBar {
+  width: inherit;
+}
 .searchBar__input {
   all: unset;
-  width: 120vh;
+  width: inherit;
   padding: 1em;
   background: white;
   border-bottom: 1px solid gray;

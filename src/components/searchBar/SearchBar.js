@@ -2,9 +2,10 @@ import React from "react";
 
 import "./SearchBar.scss";
 
-const SearchBar = ({ students, setSearch }) => {
+const SearchBar = ({ students, setSearch, setSearchInput }) => {
   const handleSearchText = (e) => {
     const searchInput = e.target.value.toLowerCase();
+    setSearchInput(e.target.value.toLowerCase());
     if (searchInput) {
       let filteredStudents = students.filter((student) => {
         const fullName = `${student.firstName} ${student.lastName}`;
